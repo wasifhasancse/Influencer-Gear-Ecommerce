@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Bricolage Grotesque", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* common class start  */
@@ -21,6 +22,16 @@
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
+  transition: all .3s;
+}
+
+.primary-btn:hover {
+  
+  border: 2px solid #e02c6d;
+  color: #e02c6d;
+  background: #fff;
+  /* transform: scale(1.02); */
+  transform: scale(.96);
 }
 
 a {
@@ -58,17 +69,50 @@ a {
   color: #3a3a3a;
 }
 
+.nav h1 span{
+  color: #e02c6d;
+}
+
 .nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 35px;
 }
 
 .nav ul a {
   color: #3a3a3a;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
+  position: relative;
+  transition: all .3s;
+  display: inline-block;
 }
+.nav ul a i:hover{
+  color: #e02c6d;
+  transform: scale(1.05);
+}
+
+.nav-link:hover{
+  color: #e02c6d;
+  transform: scale(1.05);
+}
+
+.nav-link::after{
+content: '';
+position: absolute;
+left: 0px;
+top: 25px;
+background: #e02c6d;
+height: 2px;
+width: 0;
+transition: all .8s;
+}
+
+.nav-link:hover::after{
+  width: 100%;
+}
+
 /* navigation section end  */
 
 /* hero section start */
@@ -172,6 +216,12 @@ a {
   font-weight: 600;
   width: 100%;
   padding: 10px;
+  transition: all .3s;
+}
+
+.pagination-btn:hover{
+  color: #3a3a3a;
+  transform: scale(1.01);
 }
 /* collection section end */
 
@@ -213,5 +263,15 @@ background: #2a1d21;
   color: #fff;
   display: flex;
   gap: 20px;
+}
+
+.footer-social i{
+  transition: all 1s;
+
+}
+
+.footer-social i:hover{
+  color: #fd347e;
+  transform: rotate(360deg) scale(1.2);
 }
 /* footer section end */
