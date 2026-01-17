@@ -315,11 +315,12 @@ footer {
   }
 
   .sponsors img {
-    width: 20%;
+    max-width: 60%;
+    filter: grayscale(0);
 }
   .featured-products-image img,
   .hero-image img,
-  .sponsors img, .collection-card img {
+  .collection-card img {
     width: 100%;
   }
 
@@ -359,6 +360,7 @@ footer {
 
   .sponsors img {
     width: 30%;
+    filter: grayscale(0);
 }
   
   .collection-card-container {
